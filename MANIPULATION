@@ -1,0 +1,44 @@
+mysql> INSERT INTO school (name, country, capacity) VALUES ('Beauxbatons Academy of Magic', 'France', 550),
+('Castelobruxo', 'Brazil', 380), ('Durmstrang Institute', 'Norway', 570),
+('Hogwarts School of Witchcraft and Wizardry', 'United Kingdom', 450),
+('Ilvermorny School of Witchcraft and Wizardry', 'USA', 300),
+('Koldovstoretz', 'Russia' , 125), ('Mahoutokoro School of Magic', 'Japan', 800),
+('Uagadou School of Magic', 'Uganda', 350);
+
+
+
+mysql> SELECT * FROM school;
++----+----------------------------------------------+----------------+----------+
+| id | name                                         | country        | capacity |
++----+----------------------------------------------+----------------+----------+
+|  1 | Beauxbatons Academy of Magic                 | France         |      550 |
+|  2 | Castelobruxo                                 | Brazil         |      380 |
+|  3 | Durmstrang Institute                         | Norway         |      570 |
+|  4 | Hogwarts School of Witchcraft and Wizardry   | United Kingdom |      450 |
+|  5 | Ilvermorny School of Witchcraft and Wizardry | USA            |      300 |
+|  6 | Koldovstoretz                                | Russia         |      125 |
+|  7 | Mahoutokoro School of Magic                  | Japan          |      800 |
+|  8 | Uagadou School of Magic                      | Uganda         |      350 |
++----+----------------------------------------------+----------------+----------+
+8 rows in set (0.00 sec)
+
+
+mysql> UPDATE school SET country='Sweden' WHERE name='Mahoutokoro School of Magic';
+
+mysql> UPDATE school SET capacity=700 WHERE name='Durmstrang Institute';
+
+mysql> DELETE FROM school WHERE name LIKE '%Magic';
+
+mysql> SELECT * FROM school;
++----+----------------------------------------------+----------------+----------+
+| id | name                                         | country        | capacity |
++----+----------------------------------------------+----------------+----------+
+|  2 | Castelobruxo                                 | Brazil         |      380 |
+|  3 | Durmstrang Institute                         | Norway         |      700 |
+|  4 | Hogwarts School of Witchcraft and Wizardry   | United Kingdom |      450 |
+|  5 | Ilvermorny School of Witchcraft and Wizardry | USA            |      300 |
+|  6 | Koldovstoretz                                | Russia         |      125 |
++----+----------------------------------------------+----------------+----------+
+
+
+
